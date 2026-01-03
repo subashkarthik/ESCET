@@ -1,0 +1,7 @@
+{
+  "name": "ES College of Engineering and Technology",
+  "description": "A high-end, responsive academic website for ES College of Engineering and Technology, featuring modern design, advanced animations, and comprehensive department and facility showcases.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
