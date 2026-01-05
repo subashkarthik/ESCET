@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import ProtectedRoute from './components/ProtectedRoute';
 import Home from './pages/Home';
 import About from './pages/About';
+import CollegeProfile from './pages/CollegeProfile';
 import Vision from './pages/Vision';
 import ChairmanMessage from './pages/ChairmanMessage';
 import PrincipalMessage from './pages/PrincipalMessage';
@@ -16,6 +17,7 @@ import DepartmentDetail from './pages/DepartmentDetail';
 import Facilities from './pages/Facilities';
 import CoursesOffered from './pages/CoursesOffered';
 import AdmissionProcedure from './pages/AdmissionProcedure';
+import AdmissionOverview from './pages/AdmissionOverview';
 import Scholarship from './pages/Scholarship';
 import ImageGallery from './pages/ImageGallery';
 import VideoGallery from './pages/VideoGallery';
@@ -69,7 +71,7 @@ const App: React.FC = () => {
             <Route path="/about" element={<About />} />
             
             {/* About Sub-routes */}
-            <Route path="/about/profile" element={<PlaceholderPage title="College Profile" />} />
+            <Route path="/about/profile" element={<CollegeProfile />} />
             <Route path="/about/vision" element={<Vision />} />
             <Route path="/about/mission" element={<PlaceholderPage title="Mission" />} />
             <Route path="/about/chairman-message" element={<ChairmanMessage />} />
@@ -85,7 +87,7 @@ const App: React.FC = () => {
             <Route path="/facilities" element={<Facilities />} />
             
             {/* Admission Sub-routes */}
-            <Route path="/admissions" element={<PlaceholderPage title="Admissions Overview" />} />
+            <Route path="/admissions" element={<AdmissionOverview />} />
             <Route path="/admissions/courses" element={<CoursesOffered />} />
             <Route path="/admissions/eligibility" element={<PlaceholderPage title="Eligibility Criteria" />} />
             <Route path="/admissions/procedure" element={<AdmissionProcedure />} />

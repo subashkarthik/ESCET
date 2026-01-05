@@ -33,7 +33,7 @@ export const MANAGEMENT: ManagementMember[] = [
     id: 'principal',
     name: 'Dr.K.Indira',
     role: "Principal's Message",
-    image: '/images/principal.jpg',
+    image: '/images/principal(1).jpg',
     message: 'Committed to academic rigor and holistic development of our engineering professionals.',
     path: '/about/principal-message'
   }
