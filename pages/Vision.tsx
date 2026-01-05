@@ -16,7 +16,7 @@ const Vision: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <motion.img 
             style={{ scale: 1.1, y: y1 }}
-            src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop" 
+            src="public/images/hero(1).jpg" 
             alt="Vision Background" 
             className="w-full h-full object-cover brightness-[0.4]"
           />
@@ -78,7 +78,7 @@ const Vision: React.FC = () => {
                 <div className="relative p-1 bg-gradient-to-br from-[#ff6b35] to-[#ff9e7d] rounded-[3rem] shadow-2xl overflow-hidden group">
                   <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
                   <img 
-                    src="/vision-campus.png" 
+                    src="public/images/campus-hero.jpg" 
                     alt="Campus" 
                     className="w-full h-[500px] object-cover rounded-[2.8rem] transition-transform duration-1000 group-hover:scale-110"
                   />
