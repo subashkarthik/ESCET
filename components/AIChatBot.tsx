@@ -1,9 +1,10 @@
 
+
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageSquare, Send, X, Sparkles, User, Bot, Loader2 } from 'lucide-react';
-import { GoogleGenAI } from "@google/genai";
-import { DEPARTMENTS, MANAGEMENT } from '../constants';
+import { DEPARTMENTS } from '../constants';
+
 
 const AIChatBot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,29 +30,39 @@ const AIChatBot: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
-      const model = 'gemini-3-flash-preview';
+      // Simple keyword-based response system (fallback until proper API is configured)
+      const lowerMsg = userMsg.toLowerCase();
+      let responseText = '';
       
-      const systemInstruction = `
-        You are the official AI Navigator for E.S. College of Engineering and Technology (ESCET).
-        College Info: Located in Villupuram, Tamil Nadu. Approved by AICTE, Affiliated to Anna University.
-        Departments: ${DEPARTMENTS.map(d => d.name).join(', ')}.
-        Leadership: Founder E.Swamikkannu, Chairman Er.S.Selvamani, Principal Dr.K.Indira.
-        Tone: Professional, helpful, and high-end. 
-        Rules: Only answer questions about ESCET. If asked something unrelated, politely steer them back to campus info.
-        Keep responses concise and use markdown for lists or bold text.
-      `;
-
-      const result = await ai.models.generateContent({
-        model,
-        contents: [...messages.map(m => m.text), userMsg].join('\n'),
-        config: {
-          systemInstruction,
-          temperature: 0.7,
-        }
-      });
-
-      const responseText = result.text || "I'm sorry, I couldn't process that. Please try again.";
+      // Department queries
+      if (lowerMsg.includes('department') || lowerMsg.includes('course') || lowerMsg.includes('program')) {
+        responseText = `ESCET offers the following programs:\n\n**B.E Programs:**\n- Computer Science and Engineering (CSE)\n- Electronics and Communication Engineering (ECE)\n- Electrical and Electronics Engineering (EEE)\n- Mechanical Engineering\n- Civil Engineering\n\n**B.Tech Programs:**\n- Information Technology (IT)\n- Artificial Intelligence and Data Science (AI & DS)\n\nWould you like to know more about any specific department?`;
+      }
+      // Admission queries
+      else if (lowerMsg.includes('admission') || lowerMsg.includes('apply') || lowerMsg.includes('join')) {
+        responseText = `**Admissions are OPEN for Academic Year 2026-2027!**\n\nWe offer 660 total seats across 7 engineering programs. The college is approved by AICTE and affiliated to Anna University.\n\nFor admission details, please visit our Admissions page or contact:\n📞 +91 94867 22474\n📧 admin@escet.in`;
+      }
+      // Location queries
+      else if (lowerMsg.includes('location') || lowerMsg.includes('address') || lowerMsg.includes('where')) {
+        responseText = `📍 **ESCET Location:**\n\nNO.249/C, E.S.Nagar, NH-45\nChennai Trunk Road\nVillupuram - 605601\nTamil Nadu, India\n\nWe're located on National Highway 45, just 40 kms from Puducherry and 160 kms from Chennai.`;
+      }
+      // Contact queries
+      else if (lowerMsg.includes('contact') || lowerMsg.includes('phone') || lowerMsg.includes('email')) {
+        responseText = `**Contact ESCET:**\n\n📞 Phone: +91 94867 22474\n📧 Email: admin@escet.in\n🌐 Website: www.escet.in\n\nOur admissions team is here to help you!`;
+      }
+      // Leadership queries
+      else if (lowerMsg.includes('principal') || lowerMsg.includes('chairman') || lowerMsg.includes('management')) {
+        responseText = `**ESCET Leadership:**\n\n👤 **Founder:** E. Swamikkannu\n👤 **Chairman:** Er. S. Selvamani\n👤 **Principal:** Dr. K. Indira\n\nOur leadership is committed to providing world-class engineering education and fostering innovation.`;
+      }
+      // Facilities queries
+      else if (lowerMsg.includes('facilities') || lowerMsg.includes('library') || lowerMsg.includes('lab')) {
+        responseText = `**ESCET Facilities:**\n\n📚 Central Library with 100,000+ volumes\n🔬 Advanced Research Labs\n💻 State-of-the-art Computer Labs\n🏃 Sports Complex\n🏢 Modern Infrastructure\n\nWe provide world-class facilities for holistic student development.`;
+      }
+      // Default response
+      else {
+        responseText = `Hello! I'm the ESCET AI Navigator. I can help you with:\n\n✅ Department & Course Information\n✅ Admission Details\n✅ Campus Location & Contact\n✅ Facilities & Infrastructure\n✅ Leadership & Management\n\nWhat would you like to know about E.S. College of Engineering and Technology?`;
+      }
+      
       setMessages(prev => [...prev, { role: 'bot', text: responseText }]);
     } catch (error) {
       console.error("AI Error:", error);
