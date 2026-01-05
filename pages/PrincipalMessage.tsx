@@ -59,7 +59,7 @@ const PrincipalMessage: React.FC = () => {
               <div className="relative group">
                 <div className="relative z-10 rounded-[3rem] border-[16px] border-[#f0f8ff] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.1)] transition-transform duration-700">
                   <img 
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop" 
+                    src="/images/principal(1).jpg" 
                     alt="Dr. K. Indira" 
                     className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-105"
                   />
@@ -68,7 +68,7 @@ const PrincipalMessage: React.FC = () => {
                 </div>
                 
                 {/* ID Card Style Floating Tag */}
-                <div className="absolute -bottom-10 -right-6 water-glass !bg-white/95 p-8 backdrop-blur-3xl shadow-3xl border-white/60 min-w-[300px]">
+                <div className="absolute -bottom-10 -right-6 z-20 water-glass !bg-white/95 p-8 backdrop-blur-3xl shadow-3xl border-white/60 min-w-[300px]">
                    <div className="flex items-center gap-5">
                       <div className="w-14 h-14 bg-[#004a99] rounded-2xl flex items-center justify-center text-white shadow-xl rotate-3 group-hover:rotate-0 transition-transform">
                         <User size={28} />
