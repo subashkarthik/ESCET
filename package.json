@@ -1,12 +1,20 @@
 {
   "name": "es-college-of-engineering-and-technology",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Official website for E.S. College of Engineering and Technology, Villupuram",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "keywords": ["react", "typescript", "vite", "college", "education", "escet"],
+  "author": "ESCET Development Team",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/subashkarthik/ESCET.git"
   },
   "dependencies": {
     "framer-motion": "^12.23.26",
