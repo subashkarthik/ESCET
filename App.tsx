@@ -22,6 +22,7 @@ import AdmissionProcedure from './pages/AdmissionProcedure';
 import AdmissionOverview from './pages/AdmissionOverview';
 import Scholarship from './pages/Scholarship';
 import EligibilityCriteria from './pages/EligibilityCriteria';
+import Activities from './pages/Activities';
 import ImageGallery from './pages/ImageGallery';
 import VideoGallery from './pages/VideoGallery';
 import Contact from './pages/Contact';
@@ -96,7 +97,7 @@ const App: React.FC = () => {
             <Route path="/admissions/procedure" element={<AdmissionProcedure />} />
             <Route path="/admissions/scholarship" element={<Scholarship />} />
 
-            <Route path="/activities" element={<PlaceholderPage title="Activities" />} />
+            <Route path="/activities" element={<Activities />} />
             
             {/* Gallery Routes */}
             <Route path="/gallery" element={<Navigate to="/gallery/images" replace />} />
