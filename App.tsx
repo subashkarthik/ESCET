@@ -12,6 +12,8 @@ import Vision from './pages/Vision';
 import ChairmanMessage from './pages/ChairmanMessage';
 import PrincipalMessage from './pages/PrincipalMessage';
 import OrgChart from './pages/OrgChart';
+import CampusLife from './pages/CampusLife';
+import MandatoryDisclosure from './pages/MandatoryDisclosure';
 import Departments from './pages/Departments';
 import DepartmentDetail from './pages/DepartmentDetail';
 import Facilities from './pages/Facilities';
@@ -19,6 +21,7 @@ import CoursesOffered from './pages/CoursesOffered';
 import AdmissionProcedure from './pages/AdmissionProcedure';
 import AdmissionOverview from './pages/AdmissionOverview';
 import Scholarship from './pages/Scholarship';
+import EligibilityCriteria from './pages/EligibilityCriteria';
 import ImageGallery from './pages/ImageGallery';
 import VideoGallery from './pages/VideoGallery';
 import Contact from './pages/Contact';
@@ -76,10 +79,10 @@ const App: React.FC = () => {
             <Route path="/about/mission" element={<PlaceholderPage title="Mission" />} />
             <Route path="/about/chairman-message" element={<ChairmanMessage />} />
             <Route path="/about/principal-message" element={<PrincipalMessage />} />
-            <Route path="/about/mandatory-disclosure" element={<PlaceholderPage title="Mandatory Disclosure" />} />
+            <Route path="/about/mandatory-disclosure" element={<MandatoryDisclosure />} />
             <Route path="/about/aicte-eoa" element={<PlaceholderPage title="AiCTE EOA" />} />
             <Route path="/about/org-chart" element={<OrgChart />} />
-            <Route path="/about/campus-life" element={<PlaceholderPage title="Campus Life" />} />
+            <Route path="/about/campus-life" element={<CampusLife />} />
 
             <Route path="/departments" element={<Departments />} />
             <Route path="/departments/:id" element={<DepartmentDetail />} />
@@ -89,7 +92,7 @@ const App: React.FC = () => {
             {/* Admission Sub-routes */}
             <Route path="/admissions" element={<AdmissionOverview />} />
             <Route path="/admissions/courses" element={<CoursesOffered />} />
-            <Route path="/admissions/eligibility" element={<PlaceholderPage title="Eligibility Criteria" />} />
+            <Route path="/admissions/eligibility" element={<EligibilityCriteria />} />
             <Route path="/admissions/procedure" element={<AdmissionProcedure />} />
             <Route path="/admissions/scholarship" element={<Scholarship />} />
 
