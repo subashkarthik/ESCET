@@ -9,11 +9,13 @@ import Home from './pages/Home';
 import About from './pages/About';
 import CollegeProfile from './pages/CollegeProfile';
 import Vision from './pages/Vision';
+import Mission from './pages/Mission';
 import ChairmanMessage from './pages/ChairmanMessage';
 import PrincipalMessage from './pages/PrincipalMessage';
 import OrgChart from './pages/OrgChart';
 import CampusLife from './pages/CampusLife';
 import MandatoryDisclosure from './pages/MandatoryDisclosure';
+import AicteEoa from './pages/AicteEoa';
 import Departments from './pages/Departments';
 import DepartmentDetail from './pages/DepartmentDetail';
 import Facilities from './pages/Facilities';
@@ -77,11 +79,11 @@ const App: React.FC = () => {
             {/* About Sub-routes */}
             <Route path="/about/profile" element={<CollegeProfile />} />
             <Route path="/about/vision" element={<Vision />} />
-            <Route path="/about/mission" element={<PlaceholderPage title="Mission" />} />
+            <Route path="/about/mission" element={<Mission />} />
             <Route path="/about/chairman-message" element={<ChairmanMessage />} />
             <Route path="/about/principal-message" element={<PrincipalMessage />} />
             <Route path="/about/mandatory-disclosure" element={<MandatoryDisclosure />} />
-            <Route path="/about/aicte-eoa" element={<PlaceholderPage title="AiCTE EOA" />} />
+            <Route path="/about/aicte-eoa" element={<AicteEoa />} />
             <Route path="/about/org-chart" element={<OrgChart />} />
             <Route path="/about/campus-life" element={<CampusLife />} />
 
