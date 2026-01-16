@@ -29,7 +29,6 @@ import ImageGallery from './pages/ImageGallery';
 import VideoGallery from './pages/VideoGallery';
 import Contact from './pages/Contact';
 import AdmissionEnquiryModal from './components/AdmissionEnquiryModal';
-import AIChatBot from './components/AIChatBot';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminDashboard from './pages/admin/AdminDashboard';
 
@@ -128,9 +127,6 @@ const App: React.FC = () => {
           isOpen={isEnquiryModalOpen} 
           onClose={() => setIsEnquiryModalOpen(false)} 
         />
-
-        {/* High-End AI Navigator */}
-        <AIChatBot />
       </div>
     </Router>
   );
