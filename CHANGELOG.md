@@ -5,6 +5,49 @@ All notable changes to the ESCET project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-01-18
+
+### Added - New Premium Pages
+
+#### Placements Page
+
+- **Placement Statistics Dashboard** - 95% placement rate, average package 6.5 LPA, highest package 24 LPA
+- **Top Recruiters Showcase** - Google, Microsoft, Amazon, TCS, Infosys, Wipro, and 150+ companies
+- **Placement Process Overview** - Pre-placement training, mock interviews, campus drives
+- **Student Success Stories** - Testimonials from placed students with package details
+- **Premium Design** - Glassmorphism with green accent color (#10b981)
+- **Assets** - Hero image, placement statistics, campus recruitment visuals
+
+#### Faculty Page
+
+- **Faculty Statistics** - 150+ faculty members, 85% PhD holders, 500+ research papers
+- **Department Filter** - Filter faculty by department (Computer Science, Electronics, Mechanical, Civil, Electrical)
+- **Faculty Cards** - Detailed profiles with qualifications, experience, specialization, and contact info
+- **Faculty Showcase** - Professional portraits of experienced educators
+- **Premium Design** - Glassmorphism with indigo accent color (#6366f1)
+- **Assets** - Hero image, faculty profiles collage
+
+#### Research Page
+
+- **Research Statistics** - 500+ research papers, 45+ ongoing projects, 28 patents filed
+- **Research Focus Areas** - AI/ML, IoT, Renewable Energy, Robotics, VLSI, Structural Engineering
+- **Ongoing Projects** - Detailed project cards with PI, funding, duration, and status
+- **Research Facilities** - State-of-the-art laboratory showcase
+- **Premium Design** - Glassmorphism with orange accent color (#f59e0b)
+- **Assets** - Hero image, research projects collage
+
+### Enhanced
+
+#### Routing
+
+- Added routes for `/placements`, `/faculty`, and `/research` pages
+- Integrated all new pages into main navigation system
+
+#### Documentation
+
+- Created `NEW_PAGES_DOCUMENTATION.md` with comprehensive details
+- Updated routing configuration in `App.tsx`
+
 ## [1.0.0] - 2026-01-16
 
 ### Added - Backend Migration
