@@ -27,6 +27,7 @@ import EligibilityCriteria from './pages/EligibilityCriteria';
 import Activities from './pages/Activities';
 import Placements from './pages/Placements';
 import Faculty from './pages/Faculty';
+import Research from './pages/Research';
 import ImageGallery from './pages/ImageGallery';
 import VideoGallery from './pages/VideoGallery';
 import Contact from './pages/Contact';
@@ -103,6 +104,7 @@ const App: React.FC = () => {
             <Route path="/activities" element={<Activities />} />
             <Route path="/placements" element={<Placements />} />
             <Route path="/faculty" element={<Faculty />} />
+            <Route path="/research" element={<Research />} />
             
             {/* Gallery Routes */}
             <Route path="/gallery" element={<Navigate to="/gallery/images" replace />} />
